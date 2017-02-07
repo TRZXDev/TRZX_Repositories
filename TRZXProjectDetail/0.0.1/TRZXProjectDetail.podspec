@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint TRZXProjectDetail.podspec' to ensure this is a
+#  Be sure to run `pod spec lint TRZXProjectDetailBusinessCategory.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-			Testing Private Podspec.
+			this is Demo.
                    DESC
 
   s.homepage     = "https://github.com/TRZXDev/TRZXProjectDetail"
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-    s.platform     = :ios, "9.0"
+    s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -91,10 +91,11 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TRZXProjectDetail/TRZXProjectDetail/**/*.{h,m}"
+    s.source_files  = "TRZXProjectDetail/TRZXProjectDetail/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+
+    s.public_header_files = "TRZXProjectDetail/TRZXProjectDetail/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -137,3 +138,4 @@ Pod::Spec.new do |s|
     s.dependency "TRZXConfirmFinancingBusinessCategory"
 
 end
+
