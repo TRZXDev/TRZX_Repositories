@@ -95,9 +95,6 @@ Pod::Spec.new do |s|
   # s.exclude_files = "Classes/Exclude"
 
 
-    s.public_header_files = "TRZXConfirmFinancing/TRZXConfirmFinancing/**/*.h"
-
-
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
@@ -134,6 +131,55 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    s.dependency "TRZXNetwork"
+  s.dependency "TRZXNetwork"
 
+end
+
+
+
+
+
+
+
+
+
+
+Pod::Spec.new do |s|
+  s.name         = 'TRZXNetwork'
+  s.summary      = 'Asynchronous image loading framework.'
+  s.version      = '0.0.7'
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.authors      = { 'fpli' => '952241861@qq.com' }
+  s.homepage     = 'https://github.com/TRZXDev/TRZXNetwork'
+  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  s.source       = { :git => "https://github.com/TRZXDev/TRZXNetwork.git", :tag => "#{s.version}" }
+  
+  s.requires_arc = true
+  s.source_files = 'TRZXNetwork/TRZXNetwork/*.{h,m}'
+  s.dependency "AFNetworking"
+  s.dependency "YYCache"
+
+end
+
+
+
+
+
+
+Pod::Spec.new do |s|
+  s.name         = 'TRZXConfirmFinancing'
+  s.summary      = 'Asynchronous image loading framework.'
+  s.version      = '0.0.1'
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.authors      = { 'fpli' => '952241861@qq.com' }
+  s.homepage     = 'https://github.com/TRZXDev/TRZXConfirmFinancing'
+  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  s.source       = { :git => "https://github.com/TRZXDev/TRZXConfirmFinancing.git", :tag => "#{s.version}" }
+  
+  s.requires_arc = true
+  s.source_files = 'TRZXConfirmFinancing/TRZXConfirmFinancing/*.{h,m}'
+  s.dependency "TRZXNetwork"
+  
 end
